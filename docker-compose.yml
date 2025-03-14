@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  api-translator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: translator-app-api:latest
+    ports:
+      - "4321:4321"
+    env_file:
+      - .env.docker
